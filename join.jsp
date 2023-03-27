@@ -21,7 +21,7 @@ try{//성공했을때
 	Class.forName("oracle.jdbc.OracleDriver");//오라클 데이터베이스 드라이브 불러오기
 	Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","1234");
 	Statement stmt = con.createStatement();//sql 실행을 위한 stmt를 준비
-	ResultSet rs = stmt.executeQuery("select max(custno)+1 as custno from member_tbl2_02");
+	ResultSet rs = stmt.executeQuery("select max(custno)+1 as custno from member_tbl_02");
 	rs.next();//1개의 결과물 출력 만약 한개만 출력하지 않고 여러개 출력할거면 while(re.next()) 활용하면 됨
 	custno = rs.getString("custno");
 	stmt.close();

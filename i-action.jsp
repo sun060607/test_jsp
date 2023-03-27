@@ -24,7 +24,7 @@
 			Class.forName("oracle.jdbc.OracleDriver");
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","1234");
 			Statement stmt = con.createStatement();
-			String sql = String.format("insert into member_tbl2_02 values('%s','%s','%s','%s',TO_DATE('%s','yyyy-MM-dd'),'%s','%s')",custno,custname,phone,address,joindate,grade,city);
+			String sql = String.format("insert into member_tbl_02 values('%s','%s','%s','%s',TO_DATE('%s','yyyy-MM-dd'),'%s','%s')",custno,custname,phone,address,joindate,grade,city);
 			stmt.executeUpdate(sql);
 			stmt.close();
 			con.close();

@@ -13,7 +13,7 @@
 	<section>
 		<h2><b>회원목록조회/수정</b></h2>
 		<form>
-			<table border = 1>
+			<table border = '1'>
 				<tr>
 					<td>회원번호</td>
 					<td>회원성명</td>
@@ -29,7 +29,7 @@
 						Class.forName("oracle.jdbc.OracleDriver");
 						Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xe","system","1234");
 						Statement stmt = con.createStatement();
-						ResultSet rs = stmt.executeQuery("select * from member_tbl2_02");
+						ResultSet rs = stmt.executeQuery("select * from member_tbl_02");
 						while(rs.next()){
 								grade = rs.getString("grade");
 								switch(grade){
@@ -45,11 +45,11 @@
 								}
 							%>
 								<tr>
-									<td><%=rs.getString("custno")%></td>
+									<td><a href = "modify.jsp?custno=<%=rs.getString("custno")%>"><%=rs.getString("custno")%></a></td>
 									<td><%=rs.getString("custname") %></td>
 									<td><%=rs.getString("phone") %></td>
 									<td><%=rs.getString("address") %></td>
-									<td><%=rs.getString("joindate") %></td>
+									<td><%=rs.getDate("joindate") %></td>
 									<td><%=grade %></td>
 									<td><%=rs.getString("city") %></td>
 								</tr>
