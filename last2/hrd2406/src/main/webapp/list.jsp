@@ -39,7 +39,7 @@
 								case "MF":
 									num = "미드필더";
 									break;
-								case "FW":
+								case "F":
 									num = "공격수";
 									break;
 							}
