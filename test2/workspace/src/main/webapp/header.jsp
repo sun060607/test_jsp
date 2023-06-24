@@ -12,7 +12,7 @@
 	<nav>
 		<a href="insert.jsp">차량입차</a>
 		<a href = "list.jsp">차량조회</a>
-		<a>차량출차</a>
+		<a href = "insert1.jsp">차량출차</a>
 		<a href="index.jsp">홈으로</a>
 	</nav>
 </body>

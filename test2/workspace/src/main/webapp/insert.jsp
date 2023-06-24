@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src='check.js'></script>
+<script type="text/javascript" src='check3.js'></script>
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
@@ -33,7 +33,7 @@
 				</tr>
 				<tr>
 					<td>입차시간</td>
-					<td><input type="text" name = "dt">예) 22:22</td>
+					<td><input type="text" name = "et">예) 11:22</td>
 				</tr>
 				<tr>
 					<td colspan="2">

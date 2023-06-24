@@ -12,13 +12,12 @@
 			request.setCharacterEncoding("UTF-8");
 			String cn = request.getParameter("cn");
 			String on = request.getParameter("on");
-			String lo = request.getParameter("lo");
-			String et = request.getParameter("et");
+			String dt = request.getParameter("dt");
 			try{
 				Class.forName("oracle.jdbc.OracleDriver");
 				Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","system","1234");
 				Statement ps = conn.createStatement();
-				String sql = String.format("insert into tbl_parking_202301 values('%s','%s','%s',null)",cn,lo,et);
+				String sql = String.format("update tbl_parking_202301 set DEPARTURE_TIME = '%s' where car_number = '%s'",dt,cn);
 				ps.executeQuery(sql);
 				conn.close();
 				ps.close();
